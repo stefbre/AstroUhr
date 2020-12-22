@@ -2,10 +2,13 @@
 ----------------------------------------
 VERWENDUNG AUF EIGENE GEFAHR!
 
-Um die Software herunter zu laden, kopieren Sie folgende Zeile:
+Um die Software herunterzuladen, kopieren Sie folgende Zeile:
 
 wget https://github.com/stefbre/AstroUhr/raw/master/install_AstroUhr.sh && sh install_AstroUhr.sh
+
+Copy & Paste im SSH Terminal, mehr muss nicht getan werden.
 ______________________________________________________________________________________________________
+
 Die Software wurde getestet auf: Pi Zero W, Pi 3b & Pi 4 mit dem neuesten Lite OS.
 Werden andere Webserver (apache etc.) verwendet, muss der Port geändert werden!
 
@@ -27,6 +30,7 @@ Um die Einrichtung abzuschließen, geben Sie das anzusprechende Segment/Modul/Re
 Es gibt je einen Befehl, für Sonnenauf- und untergang.
 
 ______________________________________________________________________________________________________
+
 Möchten Sie z.B. das Modul 87 ansprechen und jedes 2. Relais einschalten, sieht der Befehl wie folgt aus:
 
 Legende: Relais 1 = EIN; 0 = AUS; - = nicht geschaltet
@@ -44,13 +48,16 @@ Sollte der Raspberry neustarten, startet sich der Dienst automatisch.
 Wenn der Raspberry keine Verbindung zum Internet besitzt, kann durch "Zeit setzen" die Serverzeit des Pis, an die des Browsers angepasst werden.
 
 ______________________________________________________________________________________________________
+Erweiterte Infos:
 
 Diese Dateien wurden für die Verwendung durch den Benutzer Pi erstellt, sowie Python 3.7. Wurde Pi geändert, müssen die Scripte/Dateien angepasst werden.
+Wird eine andere Version als Python 3.7 verwendet, muss die Version in der AstroUhr.service Datei angepasst werden. Diese findet man in etc/systemd/system.
 
 Möchten Sie das Passwort oder den Serverport ändern, editieren Sie folgende Datei: main.py unter /home/pi/AstroUhr und starten den Dienst/Pi neu.
 
 Das Passwort finden Sie in Zeile 114 und den Serverport in Zeile 102.
 
 Wird der Port verändert, muss die IP:Port im Browser eingeben werden! Der Standardport lautet 80.
+______________________________________________________________________________________________________
 
 Entfernen des Copyrights ist untersagt!
